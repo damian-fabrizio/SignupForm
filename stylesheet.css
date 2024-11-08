@@ -1,0 +1,192 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+    --s: 194px; /* control the size*/
+    --c1: #f6edb3;
+    --c2: #acc4a3;
+    --c3: #55897c;
+    
+    --_l:#0000 calc(25%/3),var(--c1) 0 25%,#0000 0;
+    --_g:conic-gradient(from 120deg at 50% 87.5%,var(--c1) 120deg,#0000 0);
+    background:
+      var(--_g),var(--_g) 0 calc(var(--s)/2),
+      conic-gradient(from 180deg at 75%,var(--c2) 60deg,#0000 0),
+      conic-gradient(from 60deg at 75% 75%,var(--c1) 0 60deg,#0000 0),
+      linear-gradient(150deg,var(--_l)) 0 calc(var(--s)/2),
+      conic-gradient(at 25% 25%,#0000 50%,var(--c2) 0 240deg,var(--c1) 0 300deg,var(--c2) 0),
+      linear-gradient(-150deg,var(--_l)) var(--c3);
+    background-size: calc(0.866*var(--s)) var(--s);
+    
+
+}
+
+    
+.form{
+    width: 98%;
+    max-width: 400px;
+}
+.form .header{
+    text-align: center;
+    padding: 20px;
+    display: grid;
+    gap: 5px;
+}
+.form .header p{
+    color: #555;
+}
+.form .body{
+    box-shadow: -2px 3px 0px 1px #55897c;
+    border-radius: 0px;
+    height: 320px;
+    overflow: hidden;
+    background-color: #acc4a3;
+    opacity: 96%;
+}
+.form .body .pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    margin-top: 15px;
+}
+.form .body .pagination .number{
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 50%;
+    background-color: #4c79f7;
+    color: #fff;
+    font-size: 15px;
+}
+.form .body .pagination .bar{
+    width: 50px;
+    height: 4px;
+    background: #4c79f7;
+    border-radius: 5px;
+}
+.form .body .pagination .active ~ div{
+    background-color: #ddd;
+    color: #111;
+}
+.form .steps{
+    width: 400%;
+    display: flex;
+    transition: all 300ms ease-in-out;
+}
+.form .steps .step{
+    width: 98vw;
+    max-width: 400px;
+    padding: 25px 35px 15px;
+    overflow: hidden;
+}
+.form .steps .step #errorMessage{
+    margin-top: 5px;
+    font-size: 12px;
+}
+.form .steps .step h4{
+    margin-bottom: 5px;
+}
+.form .steps .step p{
+    color: #555;
+    max-width: 90%;
+    font-size: 15px;
+}
+.form .steps .step .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+.form .steps .step .grid .col label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.form .steps .step .grid .col input{
+    width: 100%;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 5px;
+    background: #ddd;
+    opacity: 75%;
+
+}
+.form .steps .step .grid .col .checkbox input{
+    display: none;
+}
+.form .steps .step .grid .col .checkbox label{
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #55897c;
+    margin: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form .steps .step .grid .col .checkbox label:hover{
+    background: #4b796e;
+}
+.form .steps .step .grid .col .checkbox input:checked + label{
+    background: #4c79f7;
+    color: #fff;
+}
+.form .steps .step .confirmation{
+    display: grid;
+    text-align: center;
+    place-items: center;
+    gap: 15px;
+}
+.form .steps .step .confirmation button{
+    background: #4c79f7;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.form .steps .step .confirmation button:hover{
+    background: #3467f6;
+}
+.form .steps .step .confirmation p{
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+.form .footer{
+    padding: 15px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.form .footer button{
+    padding: 5px 10px;
+    font-size: 15px;
+    border: none;
+    background: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    opacity: 90%;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    
+}
+.form .footer button:hover{
+    background: #d3d3d3;
+}

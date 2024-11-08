@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="form">
+        <div class="header">
+            <h2>Create Your Account</h2>
+            
+        </div>
+        <div class="body">
+            <div class="pagination">
+                <div class="number active">1</div>
+                <div class="bar"></div>
+                <div class="number ">2</div>
+                <div class="bar"></div>
+                <div class="number">3</div>
+                <div class="bar"></div>
+                <div class="number">4</div>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <h4>Personal Info</h4>
+                    <p>Provide your full name, email, and phone number</p>
+                    <div class="grid">
+                        <div class="col">
+                            <label for="name">Name</label>
+                            <input type="text" id="name">
+                        </div>
+                        <div class="col">
+                            <label for="email">Email</label>
+                            <input type="email" id="email">
+                        </div>
+                        <div class="col">
+                            <label for="phone">Phone</label>
+                            <input type="phone" id="phone">
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <h4>How did you hear about us?</h4>
+                    <p>Select the method(s) you discovered us. If none apply, select "other"</p>
+                    <div class="grid">
+                        <div class="col">
+                            <div class="checkbox">
+                                <input type="checkbox" id="google">
+                                <label for="google">Google</label> 
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="checkbox">
+                                <input type="checkbox" id="instagram">
+                                <label for="instagram">Instagram</label> 
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="checkbox">
+                                <input type="checkbox" id="radio">
+                                <label for="radio">Radio</label> 
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="checkbox">
+                                <input type="checkbox" id="other">
+                                <label for="other">Other</label> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <h4>Create a password</h4>
+                    <p>Passwords must match before proceeding</p>
+                    <div class="grid">
+                        <div class="col">
+                            <label for="password">Password</label>
+                            <input type="password" id="password">
+                        </div>
+                        <div class="col">
+                            <label for="retype-password">Re-enter Password</label>
+                            <input type="repassword" id="repassword">
+                            <p id="errorMessage" style="color: black; display: none;">Passwords do not match!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="confirmation">
+                        <h2>Confirmation</h2>
+                        <p>Click the button to finish creating your account</p>
+                        <div>
+                            <button>Create Account</button>
+                            <p class="confirmMessage">Account creation successful!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+            <button class="prev" disabled>Previous</button>
+            <button class="next">Next</button>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
